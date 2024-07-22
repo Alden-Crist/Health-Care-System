@@ -1,0 +1,35 @@
+/* UserAppointments.css */
+.appointments-table {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointments-table h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.appointments-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.appointments-table th, .appointments-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.appointments-table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.appointments-table tr:hover {
+    background-color: #f1f1f1;
+}

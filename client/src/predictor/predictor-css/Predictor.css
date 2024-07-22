@@ -1,0 +1,143 @@
+.maindiv2 {
+    width: 100wh;
+    height: 100vh;
+    text-align: center;
+    /* margin-top: -20px; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center */
+
+}
+
+.header {
+    background-color: #c9fff7;
+    padding: 20px;
+    height: 100px;
+    font-family: bradley hand, cursive;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+nav img {
+    height: 40px;
+    width: 250px;
+}
+
+.navbar {
+    display: flex;
+    gap: 70px;
+    font-size: 18px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: purple;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: rgb(78, 128, 125);
+}
+
+.adminlogin {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.login-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Form elements */
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: none;
+}
+
+/* Buttons */
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"] {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+form button[type="submit"]:hover {
+    background-color: darkgreen;
+}
+
+form button[type="button"] {
+    background-color: blue;
+    color: white;
+    border: none;
+    margin-top: 10px;
+}
+
+form button[type="button"]:hover {
+    background-color: darkblue;
+}
+
+/* Result display */
+div label {
+    font-weight: bold;
+    color: #333;
+}
+
+div input[readonly],
+div textarea[readonly] {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+div input[readonly] {
+    padding: 8px;
+}

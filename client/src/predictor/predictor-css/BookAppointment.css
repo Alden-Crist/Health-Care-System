@@ -1,0 +1,53 @@
+/* BookAppointment.css */
+.appointment-form {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.appointment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.appointment-form input[type="text"]:read-only {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+.appointment-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appointment-form button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,76 @@
+.maindiv1 {
+    width: 100wh;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #0ceac9;
+    padding: 20px;
+    height: 100px;
+    font-family: bradley hand, cursive;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    border: 1px solid rgb(185, 240, 3);
+}
+
+nav img {
+    height: 100px;
+    width: 400px;
+}
+
+.navbar {
+    display: flex;
+    gap: 70px;
+    font-size: 18px;
+    color:rgb(55, 34, 8)
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(5, 8, 75);
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: rgb(217, 32, 177);
+}
+
+.homeBg {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../home.jpg');
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    padding: 100px 300px;
+}
+.homeBg h1{
+    color: rgb(215, 12, 234);
+    font-weight: 900;
+}
+.homeBg h2{
+    color: rgb(55, 102, 111);
+}
+.homeBg button{
+    border:none;
+    height: 50px;
+    padding: 10px 30px;
+    border-radius: 8px;
+    background-color: rgb(5, 177, 5);
+    color: white;
+}
