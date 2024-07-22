@@ -37,7 +37,7 @@ const Predictor = () => {
 
                 // save in prediction in the records
                 axios
-                    .post(`${process.env.REACT_APP_API_URL}/records`, {
+                    .post(`${process.env.REACT_APP_API_URL}/api/v1/records`, {
                         patientName,
                         symptoms: inputSymptom.split(',').map(symptom => symptom.trim()),
                         predictedDisease: disease

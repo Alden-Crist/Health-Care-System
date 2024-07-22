@@ -16,7 +16,7 @@ const BookAppointment = () => {
             const userId = localStorage.getItem('user_id');
             if (userId) {
                 try {
-                    const response = await fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`);
+                    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users/${userId}`);
                     const user = await response.json();
                     if (user && user.name) {
                         setPatientName(user.name);
@@ -43,14 +43,14 @@ const BookAppointment = () => {
             const userId = localStorage.getItem('user_id');
             
 
-            const userResponse = await fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`);
+            const userResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users/${userId}`);
             const user = await userResponse.json();
             if (!user) {
                 console.error('Patient not found');
                 return;
             }
 
-            const doctorResponse = await fetch(`${process.env.REACT_APP_API_URL}/doctors?name=${doctor.name}`);
+            const doctorResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/doctors?name=${doctor.name}`);
             const doctors = await doctorResponse.json();
             if (!doctors.length) {
                 console.error('Doctor not found');
@@ -84,7 +84,7 @@ const BookAppointment = () => {
             }
 
             // Update the user's appointment data
-            const updateResponse = await fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
+            const updateResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users/${userId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ const BookAppointment = () => {
                 }),
             });
 
-            const updateResponse1 = await fetch(`${process.env.REACT_APP_API_URL}/doctors/${doctor._id}`, {
+            const updateResponse1 = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/doctors/${doctor._id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

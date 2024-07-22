@@ -54,7 +54,7 @@ const DoctorSignUp = () => {
         delete dataToSend.confirmPassword;
 
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/doctors`, dataToSend, {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/doctors`, dataToSend, {
                 headers: {
                     'Content-Type': 'application/json',
                 },

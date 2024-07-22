@@ -18,7 +18,7 @@ const DoctorAppointments = () => {
 
             try {
                 setLoading(true);
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/doctors/${doctorId}`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/doctors/${doctorId}`);
                 const doctorData = response.data; // Access data directly
 
                 if (doctorData.appointmentRequests) {
@@ -54,14 +54,14 @@ const DoctorAppointments = () => {
             updatedAppointments[index].status = newStatus;
 
             // Fetch doctor's data to get the doctor's name and time slots
-            const doctorResponse = await axios.get(`${process.env.REACT_APP_API_URL}/doctors/${doctorId}`);
+            const doctorResponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/doctors/${doctorId}`);
             const doctorData = doctorResponse.data;
             const doctorName = doctorData.name;
             const doctorTimeSlots = doctorData.timeSlots; // Get doctor's time slots
 
             // Find patient ID from the appointment
             const patientName = updatedAppointments[index].patientName;
-            const userResponse = await axios.get(`${process.env.REACT_APP_API_URL}/users?name=${patientName}`);
+            const userResponse = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/users?name=${patientName}`);
             const users = userResponse.data;
             if (!users.length) {
                 console.error('Patient not found');
@@ -77,7 +77,7 @@ const DoctorAppointments = () => {
                 delete updatedAppointments[index].timeSlots;
             }
 
-            await axios.patch(`${process.env.REACT_APP_API_URL}/doctors/${doctorId}`, {
+            await axios.patch(`${process.env.REACT_APP_API_URL}/api/v1/doctors/${doctorId}`, {
                 appointmentRequests: updatedAppointments
             });
 
@@ -96,7 +96,7 @@ const DoctorAppointments = () => {
                 return appointment;
             });
 
-            await axios.patch(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
+            await axios.patch(`${process.env.REACT_APP_API_URL}/api/v1/users/${userId}`, {
                 appointmentRequests: patientAppointments
             });
 

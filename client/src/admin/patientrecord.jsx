@@ -10,7 +10,7 @@ const PatientRecord = () => {
     useEffect(() => {
         const fetchPatients = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/admins/login/record`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/admins/login/record`);
                 setPatients(response.data);
             } catch (error) {
                 console.error('Error fetching patients data:', error);
@@ -21,7 +21,7 @@ const PatientRecord = () => {
 
     const deletePatient = async (id) => {
         try {
-            await axios.delete(`${process.env.REACT_APP_API_URL}/admins/login/record/delete/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/api/v1/admins/login/record/delete/${id}`);
             setPatients(patients.filter(patient => patient._id !== id));
         } catch (error) {
             console.error('Error deleting patient:', error);

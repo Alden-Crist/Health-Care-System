@@ -33,7 +33,7 @@ const Patientnew = () => {
             const { passwordConfirm, ...postData } = formData;
 
             // Send data to backend API for registration
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/users`, postData);
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/users`, postData);
 
             if (response.status === 201) { // Assuming 201 Created for successful registration
                 navigate('/PatientDashboard');

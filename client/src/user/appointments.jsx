@@ -4,13 +4,13 @@ import applogo from '../applogo.png';
 import './Patient.css';
 
 const fetchUserAppointments = async (userId) => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users/${userId}`);
     const userData = await response.json();
     return userData.appointmentRequests || [];
 };
 
 const fetchDoctorDetails = async (doctorName) => {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/doctors?name=${doctorName}`);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/doctors?name=${doctorName}`);
     const doctorData = await response.json();
     if (doctorData.length) {
         const doctor = doctorData[0];
@@ -77,7 +77,7 @@ const Appointments = () => {
             setLoading(true);
 
             // Remove the appointment from the user's appointmentRequests
-            await fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`, {
+            await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users/${userId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
@@ -93,7 +93,7 @@ const Appointments = () => {
               }
 
               const { doctorId, appointmentRequests } = await fetchDoctorDetails(doctorName);
-              const userResponse = await fetch(`${process.env.REACT_APP_API_URL}/users/${userId}`);
+              const userResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/v1/users/${userId}`);
               const userData = await userResponse.json();
               const patientName = userData.name;
               console.log(patientName);
@@ -117,7 +117,7 @@ const Appointments = () => {
             console.log(appointmentId1);
             console.log(typeof appointmentId1);
             // Remove the appointment from the doctor's appointmentRequests
-            await fetch(`${process.env.REACT_APP_API_URL}/doctors/${doctorId}`, {
+            await fetch(`${process.env.REACT_APP_API_URL}/api/v1/doctors/${doctorId}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'

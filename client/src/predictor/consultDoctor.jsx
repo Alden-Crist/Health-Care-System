@@ -17,7 +17,7 @@ const ConsultDoctor = () => {
 
         // Save the consultation data to the database
         axios
-            .post(`${process.env.REACT_APP_API_URL}/consultdoctors`, {
+            .post(`${process.env.REACT_APP_API_URL}/api/v1/consultdoctors`, {
                 patientName,
                 patientAge,
                 gender,

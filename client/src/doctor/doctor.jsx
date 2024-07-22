@@ -14,7 +14,7 @@ const Doctor = () => {
         event.preventDefault();
         
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/doctors/login`, {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/doctors/login`, {
                 name,
                 password
             });

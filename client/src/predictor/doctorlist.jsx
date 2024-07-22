@@ -14,7 +14,7 @@ const DoctorList = () => {
 
     useEffect(() => {
         axios
-            .get(`${process.env.REACT_APP_API_URL}/doctors?city=${city}`)
+            .get(`${process.env.REACT_APP_API_URL}/api/v1/doctors?city=${city}`)
             .then((response) => {
                 console.log('Full API Response:', response);
                 if (response.data && Array.isArray(response.data)) {

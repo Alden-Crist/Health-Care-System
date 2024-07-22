@@ -13,7 +13,7 @@ const Admin = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post(`${process.env.REACT_APP_API_URL}/admins/login`, {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/admins/login`, {
                 name,
                 password
             });

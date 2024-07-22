@@ -10,7 +10,7 @@ const MlRecord = () => {
     useEffect(() => {
         const fetchRecords = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/admins/login/records`);
+                const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/admins/login/records`);
                 setRecords(response.data);
             } catch (error) {
                 console.error('Error fetching records data:', error);
@@ -21,7 +21,7 @@ const MlRecord = () => {
 
     const deleteRecord = async (id) => {
         try {
-            await axios.delete(`${process.env.REACT_APP_API_URL}/admins/login/records/delete/${id}`);
+            await axios.delete(`${process.env.REACT_APP_API_URL}/api/v1/admins/login/records/delete/${id}`);
             setRecords(records.filter(record => record._id !== id));
         } catch (error) {
             console.error('Error deleting record:', error);
