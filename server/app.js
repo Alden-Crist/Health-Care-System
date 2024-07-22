@@ -23,10 +23,10 @@ app.use((req, res, next) => {
 
 app.use(morgan("dev"));
 
-app.use('/api/v1/users', userRouter);
-app.use('/api/v1/doctors', doctorRouter);
-app.use('/api/v1/admins', adminRouter);
-app.use('/api/v1/records', recordRouter);
-app.use('/api/v1/consultdoctors',consultRouter);
+app.use('/users', userRouter);
+app.use('/doctors', doctorRouter);
+app.use('/admins', adminRouter);
+app.use('/records', recordRouter);
+app.use('/consultdoctors',consultRouter);
 
 module.exports = app;
