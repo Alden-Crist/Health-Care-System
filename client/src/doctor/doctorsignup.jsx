@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Doctor.css';
 import { NavLink, useNavigate } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 import axios from 'axios';
 
 const DoctorSignUp = () => {
@@ -77,16 +77,21 @@ const DoctorSignUp = () => {
 
     return (
         <div className="maindiv2">
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
-            </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/Home' className="nav-link">Back</NavLink>
-                    <NavLink to='/DoctorSignUp' className="nav-link">Doctor Sign Up</NavLink>
-                </div>
-            </nav>
+           
+            <header id="header">
+    <nav>
+        <div className="logo">
+        <img src={applogo} alt="applogo" className="logo-img" />
+        </div>
+        <div className ="admin-nav">
+        <ul className="nav-links">
+        <li><NavLink to="/Home" className="nav-link">Back</NavLink></li>
+        <li><NavLink to="/DoctorSignUp" className="nav-link">Doctor Sign Up</NavLink></li>
+        
+        </ul>
+        </div>
+    </nav>
+      </header>
             <div className="container">
                 <div className="breadcrumb">
                     <a href="/Home">Home</a>

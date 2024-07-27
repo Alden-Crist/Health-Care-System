@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Doctor.css';
 import { NavLink } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 import axios from 'axios';
 
 const DoctorAppointments = () => {
@@ -108,15 +108,19 @@ const DoctorAppointments = () => {
 
     return (
         <div className="maindiv1">
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
-            </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/DoctorDashBoard' className="nav-link">Back</NavLink>
-                </div>
-            </nav>
+            <header id="header">
+                <nav>
+                    <div className="logo">
+                        <img src={applogo} alt="applogo" className="logo-img" />
+                    </div>
+                    <div className ="admin-nav">
+                        <ul className="nav-links">
+                            <li><NavLink to="/DoctorDashBoard" className="nav-link">Back</NavLink></li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </header>
             <div className="appointments-table">
                 <h1>Appointments Requests</h1>
                 {loading ? (

@@ -1,7 +1,7 @@
 import React from "react";
 import './Doctor.css';
 import { NavLink, useNavigate } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 
 const DoctorDashBoard = () => {
     const navigate = useNavigate();
@@ -13,17 +13,20 @@ const DoctorDashBoard = () => {
 
     return (
         <div className="maindiv">
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
-            </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/DoctorDashBoard' className="nav-link">Profile</NavLink>
-                    <NavLink to='/DoctorAppointments' className="nav-link">Appointments</NavLink>
-                    <button className="nav-link" onClick={handleLogout}>Logout</button>
-                </div>
-            </nav>
+            <header id="header">
+        <nav>
+          <div className="logo">
+            <img src={applogo} alt="applogo" className="logo-img" />
+          </div>
+          <div className ="admin-nav">
+          <ul className="nav-links">
+            <li><NavLink to="/DoctorDashBoard" className="nav-link">Profile</NavLink></li>
+            <li><NavLink to="/DoctorAppointments" className="nav-link">Appointments</NavLink></li>
+            <button className="nav-link" onClick={handleLogout}>Logout</button>
+          </ul>
+          </div>
+        </nav>
+      </header>
             <div className="dataa">
                 {/* Additional content for Doctor Dashboard */}
             </div>

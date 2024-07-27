@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './predictor-css/Predictor.css';
 import { NavLink, useNavigate } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 
 const Predictor = () => {
     const [inputSymptom, setInputSymptom] = useState('');
@@ -26,7 +26,8 @@ const Predictor = () => {
         event.preventDefault();
 
         axios
-            .post(`${process.env.FLASK_APP_API_URL}/predict`, { symptoms: [inputSymptom] })
+            //.post('https://ml-service-health-care-system.onrender.com/predict', { symptoms: [inputSymptom] })
+            .post('http://localhost:5000/predict', { symptoms: [inputSymptom] })
             .then((response) => {
                 const { disease, description, specialists } = response.data; // Destructure to get disease, description, and specialists
                 
@@ -56,13 +57,23 @@ const Predictor = () => {
             <div className="header">
                 <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
             </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/PatientDashBoard' className="nav-link">Back</NavLink>
-                    <NavLink to='/Predictor' className="nav-link">Predictor</NavLink>
-                </div>
-            </nav>
+            <header id="header">
+                <nav>
+                    <div className="logo">
+                        <img src={applogo} alt="applogo" className="logo-img" />
+                    </div>
+                    <div className ="admin-nav">
+                        <ul className="nav-links">
+                            <li><NavLink to="/PatientDashBoard" className="nav-link">Back</NavLink></li>
+                            <li><NavLink to="/Prdictor" className="nav-link">Predictor</NavLink></li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div className="header">
+                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
+            </div>
             <div className="adminlogin">
                 <div className="login-box">
                     <h2>Add your Symptoms here</h2>

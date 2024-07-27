@@ -1,92 +1,18 @@
 /*css for patient,patientsignup,patientDashBoard,appointments*/
 
-.maindiv1 {
-    width: 100wh;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    background-color: #c9fff7;
-    padding: 20px;
-    height: 100px;
-    font-family: bradley hand, cursive;
-    text-align: center;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-    border: 1px solid grey;
-}
-
-nav img {
-    height: 40px;
-    width: 250px;
-}
-
-.navbar {
-    display: flex;
-    gap: 70px;
-    font-size: 18px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: purple;
-    font-weight: 600;
-}
-
-.nav-link:hover {
-    color: rgb(78, 128, 125);
-}
-
-.homeBg {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../home.jpg');
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    flex-direction: column;
-    padding: 100px 300px;
-}
-.homeBg h1{
-    color: rgb(50, 50, 120);
-    font-weight: 900;
-}
-.homeBg h2{
-    color: rgb(55, 102, 111);
-}
-.homeBg button{
-    border:none;
-    height: 50px;
-    padding: 10px 30px;
-    border-radius: 8px;
-    background-color: rgb(5, 177, 5);
-    color: white;
-}
-
 .container {
     background-color: #f2f2f2;
     padding: 40px;
-    margin: 20px 0;
+    margin: 130px auto 20px auto;
     border-radius: 10px;
-    width: 300px;
+    width: 20%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: left;
-    margin-left: 700px;
+    margin-left: 600px;
     margin-bottom: 150px;
+    
 }
+
 
 .breadcrumb {
     margin-bottom: 20px;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './Admin.css';
 import { NavLink, useNavigate } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 import axios from 'axios';
 
 const Admin = () => {
@@ -29,16 +29,24 @@ const Admin = () => {
 
     return (
         <div className="maindiv2">
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
+            
+        <header id="header">
+        <nav>
+          <div className="logo">
+            <img src={applogo} alt="Appvila Logo" className="logo-img" />
+          </div>
+          <div className ="admin-nav">
+          <ul className="nav-links">
+            <li><NavLink to="/Home" className="nav-link">Back</NavLink></li>
+            <li><NavLink to="/Admin" className="nav-link">Admin</NavLink></li>
+           
+          </ul>
+          </div>
+        </nav>
+      </header>
+            <div >
+                <h1>Helath Care System</h1>
             </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/Home' className="nav-link">Back</NavLink>
-                    <NavLink to='/Admin' className="nav-link">Admin</NavLink>
-                </div>
-            </nav>
             <div className="container">
                 <div className="breadcrumb">
                     <a href="/Home">Home</a>
@@ -70,6 +78,8 @@ const Admin = () => {
                 </form>
                 {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
             </div>
+           
+           
             <div style={{ padding: '20px', backgroundColor: 'black', textAlign: 'center', color: 'white' }}>
                 copyright@HealthCareSolutions2024
             </div>
@@ -78,4 +88,8 @@ const Admin = () => {
 };
 
 export default Admin;
+
+
+
+
 

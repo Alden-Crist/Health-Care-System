@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './predictor-css/ConsultDoctor.css';
 import { NavLink } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 
 const ConsultDoctor = () => {
     const navigate = useNavigate();
@@ -32,16 +32,20 @@ const ConsultDoctor = () => {
 
     return (
         <div className="maindiv1">
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
-            </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/PatientDashBoard' className="nav-link">DashBoard</NavLink>
-                    <NavLink to='/Predictor' className="nav-link">Predictor</NavLink>
-                </div>
-            </nav>
+            <header id="header">
+                <nav>
+                    <div className="logo">
+                        <img src={applogo} alt="applogo" className="logo-img" />
+                    </div>
+                    <div className ="admin-nav">
+                        <ul className="nav-links">
+                            <li><NavLink to="/PatientDashBoard" className="nav-link">DashBoard</NavLink></li>
+                            <li><NavLink to="/Predictor" className="nav-link">Predictor</NavLink></li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </header>
             <div className="consult-doctor">
                 <h1>Consult Doctor</h1>
                 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 import './predictor-css/BookAppointment.css';
 
 const BookAppointment = () => {
@@ -117,16 +117,20 @@ const BookAppointment = () => {
 
     return (
         <div className="maindiv1">
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
-            </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/PatientDashBoard' className="nav-link">PatientDashBoard</NavLink>
-                    <NavLink to='/Predictor' className="nav-link">Predictor</NavLink>
+            <header id="header">
+                <nav>
+                <div className="logo">
+                    <img src={applogo} alt="applogo" className="logo-img" />
                 </div>
-            </nav>
+                <div className ="admin-nav">
+                <ul className="nav-links">
+                    <li><NavLink to="/PatientDashBoard" className="nav-link">PatientDashBoard</NavLink></li>
+                    <li><NavLink to="/Predictor" className="nav-link">Preditor</NavLink></li>
+                    
+                </ul>
+                </div>
+                </nav>
+            </header>
             <div className="appointment-form">
                 <h1>Book Appointment with Dr. {doctor.name}</h1>
                 <form onSubmit={handleSubmit}>

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Admin.css';
 import { NavLink } from 'react-router-dom';
-import applogo from '../applogo.png';
+import applogo from '../appl.png';
 
 const MlRecord = () => {
     const [records, setRecords] = useState([]);
@@ -30,18 +30,25 @@ const MlRecord = () => {
 
     return (
         <div className="maindiv">
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
+            
+            
+            <header id="header">
+        <nav>
+          <div className="logo">
+            <img src={applogo} alt="Appvila Logo" className="logo-img" />
+          </div>
+          <div className ="admin-nav">
+          <ul className="nav-links">
+            <li><NavLink to="/AdminDashBoard" className="nav-link">Home</NavLink></li>
+            <li><NavLink to="/DoctorRecord" className="nav-link">Doctors</NavLink></li>
+            <li><NavLink to="/PatientRecord" className="nav-link">Patients</NavLink></li>
+          </ul>
+          </div>
+        </nav>
+      </header>
+      <div >
+                <h1>Helath Care System</h1>
             </div>
-            <nav>
-                <img src={applogo} alt="applogo" />
-                <div className="navbar">
-                    <NavLink to='/AdminDashBoard' className="nav-link">Home</NavLink>
-                    <NavLink to='/DoctorRecord' className="nav-link">Doctors</NavLink>
-                    <NavLink to='/PatientRecord' className="nav-link">Patients</NavLink>
-                </div>
-            </nav>
-
             <div className="patients-container">
                 <h2>MLEvaluations List</h2>
                 <table>

@@ -1,143 +1,124 @@
-/* Base styles */
-.maindiv1 {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    background-color: #0ceac9;
-    padding: 20px;
-    height: 100px;
-    font-family: bradley hand, cursive;
+header {
+    position: fixed;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom:10px;
+    top: 0;
+    left: 0;
+    background-color: #4a667b; 
+    transition: background-color 0.3s;
+    z-index: 800;   
 }
 
 nav {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-    border: 1px solid rgb(185, 240, 3);
+    justify-content: right;
+    border-right: none;
+    border-left:none;
 }
 
-nav img {
-    height: 100px;
-    width: 400px;
-}
-
-.navbar {
+.logo {
     display: flex;
-    gap: 70px;
-    font-size: 18px;
-    color: rgb(55, 34, 8);
+    align-items: left;
+    margin-right: 300px;
 }
 
-.nav-link {
+.logo img {
+    height: 30px;
+    margin-right: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #111011; 
     text-decoration: none;
-    color: rgb(5, 8, 75);
-    font-weight: 600;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-.nav-link:hover {
-    color: rgb(217, 32, 177);
+.nav-links a:hover {
+    color:#4cbcbc;
 }
 
-.homeBg {
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url('../home.jpg');
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+.hero-content {
+    max-width: 50%;
+    color:white;
+    text-align: center;
+}
+
+.head {
+    margin-top: 100px;
+}
+
+.hero {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    flex-direction: column;
-    padding: 100px 300px;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px 10px;
+    min-height: 100vh; 
+    background-color: #4cbcbc; 
 }
 
-.homeBg h1 {
-    color: rgb(215, 12, 234);
-    font-weight: 900;
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.homeBg h2 {
-    color: rgb(55, 102, 111);
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.homeBg button {
-    border: none;
-    height: 50px;
-    padding: 10px 30px;
-    border-radius: 8px;
-    background-color: rgb(5, 177, 5);
-    color: white;
+.app-buttons a {
+    padding: 15px 30px;
+    background-color: #fff;
+    color:  #4cbcbc;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    border-color:#121111;
+    border-width: 2px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav img {
-        width: 200px;
-        height: 50px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .homeBg {
-        padding: 50px 20px;
-    }
-
-    .homeBg h1, .homeBg h2 {
-        padding: 0 10px;
-    }
-
-    .homeBg button {
-        width: 100%;
-    }
+.app-buttons a:hover {
+    background-color: #234f4f;
+    color: #160101;
+    
 }
 
-@media (max-width: 480px) {
-    .header {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    nav img {
-        width: 150px;
-        height: 40px;
-    }
-
-    .navbar {
-        gap: 10px;
-        font-size: 14px;
-    }
-
-    .homeBg {
-        padding: 20px 10px;
-    }
-
-    .homeBg h1 {
-        font-size: 24px;
-    }
-
-    .homeBg h2 {
-        font-size: 16px;
-    }
-
-    .homeBg button {
-        height: 40px;
-        padding: 5px 20px;
-    }
+.header-scrolled {
+    background-color: #fff; 
 }
+
+.extra-content {
+    background-color: #fff;
+    color: #000;
+    padding: 50px;
+    text-align: center;
+}
+
+.extra-content .content {
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #1b2735;
+    color: #ffffff;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
