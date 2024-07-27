@@ -92,7 +92,7 @@ const DoctorSignUp = () => {
         </div>
     </nav>
       </header>
-            <div className="container">
+            <div className="container3">
                 <div className="breadcrumb">
                     <a href="/Home">Home</a>
                     <a href="/DoctorSignUp">Doctor Sign Up</a>

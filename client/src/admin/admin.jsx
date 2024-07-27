@@ -47,7 +47,7 @@ const Admin = () => {
             <div >
                 <h1>Helath Care System</h1>
             </div>
-            <div className="container">
+            <div className="container1">
                 <div className="breadcrumb">
                     <a href="/Home">Home</a>
                     <a href="/Admin">Admin Login</a>

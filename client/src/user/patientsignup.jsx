@@ -69,7 +69,7 @@ const Patientnew = () => {
           </div>
         </nav>
       </header>
-            <div className="container">
+            <div className="container2">
                 <div className="breadcrumb">
                     <a href="/Home">Home</a>
                     <a href="/Admin">User Login</a>

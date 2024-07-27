@@ -46,7 +46,7 @@ const Doctor = () => {
           </div>
         </nav>
       </header>
-            <div className="container">
+            <div className="container3">
                 <div className="doctor-signup">
                 <div className="breadcrumb">
                     <a href="/Home">Home</a>

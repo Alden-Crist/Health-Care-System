@@ -26,9 +26,9 @@ const Predictor = () => {
         event.preventDefault();
 
         axios
-            //.post('https://ml-service-health-care-system.onrender.com/predict', { symptoms: [inputSymptom] })
-            .post('http://localhost:5000/predict', { symptoms: [inputSymptom] })
-            .then((response) => {
+            
+            //.post('http://localhost:5000/predict', { symptoms: [inputSymptom] })
+            .post('https://ml-service-health-care-system.onrender.com/predict', { symptoms: [inputSymptom] }).then((response) => {
                 const { disease, description, specialists } = response.data; // Destructure to get disease, description, and specialists
                 
                 setPredictedDisease(disease);
@@ -71,9 +71,7 @@ const Predictor = () => {
                     </div>
                 </nav>
             </header>
-            <div className="header">
-                <h1>SYMPTOMS BASED DISEASE PREDICTOR</h1>
-            </div>
+            
             <div className="adminlogin">
                 <div className="login-box">
                     <h2>Add your Symptoms here</h2>
